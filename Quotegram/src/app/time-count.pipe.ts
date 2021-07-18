@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TimeCountPipe implements PipeTransform {
 
-  transform(value: any): string {
+  transform(value: any):any{
     const dayInSeconds = 86400;
     let today:Date = new Date();
     let todayWithoutTime:any = new Date (today.getFullYear(), today.getMonth(), today.getDate());

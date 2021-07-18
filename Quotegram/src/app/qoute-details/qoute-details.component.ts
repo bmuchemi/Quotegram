@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Quotes } from '../quotes/quotes';
 
 @Component({
   selector: 'app-qoute-details',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QouteDetailsComponent implements OnInit {
 
-  @Input() quote: Quotes;
+  @Input()
+  quote!: Quotes;
   @Output() seen = new EventEmitter<boolean>();
 
   numberOfLikes : number = 0;

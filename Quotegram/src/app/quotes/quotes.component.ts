@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Quotes } from './quotes';
 
 @Component({
   selector: 'app-quotes',
@@ -11,18 +12,18 @@ export class QuotesComponent implements OnInit {
     new Quotes(2, 'The price good men pay for indifference to public affairs is to be ruled by evil men.', 'Plato', 'Anonymous', new Date(2018,1,2))
   ];
 
-  details(index){
-    this.quotes[index].showDetail = !this.quotes[index].showDetail;
+  details(i: string | number){
+    this.quotes[i].showDetail = !this.quotes[i].showDetail;
   }
 
-  addAQuote(quote){
+  addAQuote(quote: Quotes){
     let allQuotesLength = this.quotes.length;
     quote.id = allQuotesLength + 1;
     quote.completeDate = new Date(quote.postDate);
     this.quotes.push(quote);
   }
 
-  hideQuote(seen, index){
+  hideQuote(seen: any, index: number){
     if(seen) {
       let toHide = confirm(`Are you sure you want to delete quote?`)
       

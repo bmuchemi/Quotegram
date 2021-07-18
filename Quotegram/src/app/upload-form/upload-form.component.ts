@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Quotes } from '../quotes/quotes';
+
 
 @Component({
   selector: 'app-upload-form',
