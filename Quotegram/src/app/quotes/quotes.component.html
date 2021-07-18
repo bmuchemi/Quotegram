@@ -1,1 +1,28 @@
-<p>quotes works!</p>
+<div class="container">
+    <h2 class="nav-brand text-center">ALL THE RIGHT WORDS</h2>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <div *ngFor='let quote of quotes; let i = index' class="card">
+                <div>
+                    <div class="text-dark card-body">
+                        <svg class="bi bi-person-bounding-box text-left wrap" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
+                            <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                        <blockquote class="blockquote mb-0 text-center">"{{quote.text}}" <br>
+                            <footer class="blockquote-footer">{{quote.author}}
+                                <button (click)='details(i)' class="btn btn-dark text-warning float-right">See more</button>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <br>
+                <app-quote-details *ngIf='quote.showDetail' [quote]='quote' (seen)='hideQuote($event,i)'></app-quote-details>
+            </div>
+        </div>
+        <div class="offset-1 col-md-5">
+            <app-upload-form (addQuote)="addAQuote($event)"></app-upload-form>
+        </div>
+    </div>
+</div>
