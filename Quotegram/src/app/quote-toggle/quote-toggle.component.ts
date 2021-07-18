@@ -2,19 +2,19 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Quotes } from '../quotes/quotes';
 
 @Component({
-  selector: 'app-qoute-details',
-  templateUrl: './qoute-details.component.html',
-  styleUrls: ['./qoute-details.component.css']
+  selector: 'app-quote-toggle',
+  templateUrl: './quote-toggle.component.html',
+  styleUrls: ['./quote-toggle.component.css']
 })
-export class QouteDetailsComponent implements OnInit {
+export class QuoteToggleComponent implements OnInit {
 
   @Input()
   quote!: Quotes;
   @Output() seen = new EventEmitter<boolean>();
 
   numberOfLikes : number = 0;
-  numberOfHates : number = 0;
-
+  numberOfDislikes : number = 0;
+  
   deleteQuote(isSeen:boolean){
     this.seen.emit(isSeen);
   }
@@ -23,7 +23,7 @@ export class QouteDetailsComponent implements OnInit {
     this.numberOfLikes++;
   }
   downVote(){
-    this.numberOfHates++;
+    this.numberOfDislikes++;
   }
   constructor() { }
 

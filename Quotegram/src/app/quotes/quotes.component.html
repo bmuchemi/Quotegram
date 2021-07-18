@@ -1,5 +1,5 @@
 <div class="container">
-    <h2 class="nav-brand text-center">ALL THE RIGHT WORDS</h2>
+    <h2 class="nav-brand text-center">Welcome to Quotegram</h2>
     <hr>
     <div class="row">
         <div class="col-md-6">
@@ -12,17 +12,17 @@
                         </svg>
                         <blockquote class="blockquote mb-0 text-center">"{{quote.text}}" <br>
                             <footer class="blockquote-footer">{{quote.author}}
-                                <button (click)='details(i)' class="btn btn-dark text-warning float-right">See more</button>
+                                <button (click)='details()' class="btn btn-dark text-warning float-right">See more</button>
                             </footer>
                         </blockquote>
                     </div>
                 </div>
                 <br>
-                <app-qoute-details *ngIf='quote.showDetail' [quote]='quote' (seen)='hideQuote($event,i)'></app-qoute-details>
+                <app-quote-toggle *ngIf='quote.showDetail' [quote]='quote' (seen)='hideQuote($event,i)'></app-quote-toggle>
             </div>
         </div>
         <div class="offset-1 col-md-5">
-            <app-upload-form (addQuote)="addAQuote($event)"></app-upload-form>
+            <app-quote-submit (addQuote)="addAQuote($event)"></app-quote-submit>
         </div>
     </div>
 </div>

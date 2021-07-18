@@ -1,3 +1,4 @@
+import { InvokeMethodExpr } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Quotes } from './quotes';
 
@@ -12,8 +13,8 @@ export class QuotesComponent implements OnInit {
     new Quotes(2, 'The price good men pay for indifference to public affairs is to be ruled by evil men.', 'Plato', 'Anonymous', new Date(2018,1,2))
   ];
 
-  details(i: string | number){
-    this.quotes[i].showDetail = !this.quotes[i].showDetail;
+  details(){
+    this.quotes[1].showDetail = !this.quotes[1].showDetail;
   }
 
   addAQuote(quote: Quotes){

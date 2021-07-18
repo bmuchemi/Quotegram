@@ -5,15 +5,15 @@ import { FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
-import { QouteDetailsComponent } from './qoute-details/qoute-details.component';
-import { UploadFormComponent } from './upload-form/upload-form.component';
+import { QuoteToggleComponent } from './quote-toggle/quote-toggle.component';
+import { QuoteSubmitComponent } from './quote-submit/quote-submit.component';
 import { TimeCountPipe } from './time-count.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     QuotesComponent,
-    QouteDetailsComponent,
-    UploadFormComponent,
+    QuoteToggleComponent,
+    QuoteSubmitComponent,
     TimeCountPipe,
   ],
   imports: [

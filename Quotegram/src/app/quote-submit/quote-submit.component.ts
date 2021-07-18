@@ -3,11 +3,11 @@ import { Quotes } from '../quotes/quotes';
 
 
 @Component({
-  selector: 'app-upload-form',
-  templateUrl: './upload-form.component.html',
-  styleUrls: ['./upload-form.component.css']
+  selector: 'app-quote-submit',
+  templateUrl: './quote-submit.component.html',
+  styleUrls: ['./quote-submit.component.css']
 })
-export class UploadFormComponent implements OnInit {
+export class QuoteSubmitComponent implements OnInit {
 
   newQuote = new Quotes (0,"","","",new Date());
   @Output () addQuote = new EventEmitter<Quotes>();
