@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QouteDetailsComponent implements OnInit {
 
+  @Input() quote: Quotes;
+  @Output() seen = new EventEmitter<boolean>();
+
+  numberOfLikes : number = 0;
+  numberOfHates : number = 0;
+
+  deleteQuote(isSeen:boolean){
+    this.seen.emit(isSeen);
+  }
+
+  upVote(){
+    this.numberOfLikes++;
+  }
+  downVote(){
+    this.numberOfHates++;
+  }
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
