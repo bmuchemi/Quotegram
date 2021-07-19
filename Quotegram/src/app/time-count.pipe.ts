@@ -22,15 +22,14 @@ export class TimeCountPipe implements PipeTransform {
       if (daysCount < 30){
         return days;
       }else if (daysCount >= 30){
-        if (daysCount <= 365){
-          return months;
-        } else{
+        return months;}
+        if (daysCount >= 365){
           return years;
+        } else{
+         return '';
         }
       }
-    }else{
-      return ``;
-    }
+    
   }
 
 }

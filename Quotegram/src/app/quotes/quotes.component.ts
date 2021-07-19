@@ -23,9 +23,9 @@ export class QuotesComponent implements OnInit {
     this.quotes.push(quote);
   }
 
-  hideQuote(seen: any, index: number){
+  deleteQuote(seen: any, index: number){
     if(seen) {
-      let toHide = confirm(`Are you sure you want to delete quote?`)
+      let toHide = (`Are you sure you want to delete quote?`)
       
       if (toHide){
         this.quotes.splice(index,1);
