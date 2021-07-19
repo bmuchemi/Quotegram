@@ -1,31 +1,35 @@
 <div class="container-submit">
-    <h3>Submit a new quote</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Submit a new quote</h3>
 
-    <form #addForm='ngForm' (ngSubmit)='submitQuote();'>
-        <div class="form-group">
-            <label>Quote</label>
-            <input type="text" placeholder="Input quote..." class="form-control" required [(ngModel)]="newQuote.text" id="text" name="text" #text='ngModel' required>
-            
+            <form #addForm='ngForm' (ngSubmit)='submitQuote();'>
+                <div class="form-group">
+                    <label>Quote</label>
+                    <input type="text" placeholder="Input quote..." class="form-control" required [(ngModel)]="newQuote.text" id="text" name="text" #text='ngModel' required>
+                    
+                </div>
+        
+                <div class="form-group">
+                    <label>Author</label>
+                    <input type="text" placeholder="Author..." class="form-control" [(ngModel)]="newQuote.author" name="author" #author='ngModel' required>
+                    
+                </div>
+        
+                <div class="form-group">
+                    <label>Submitted by</label>
+                    <input type="text" placeholder="Posted by..." class="form-control" [(ngModel)]="newQuote.submitName" name="submitName" #submitName='ngModel' required>
+                    
+                </div>
+        
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" class="form-control" [(ngModel)]="newQuote.postDate" name="postDate" #postDate='ngModel' required>
+                </div>
+        
+        
+                <button class="btn-dark" type="submit">New Quote</button>
+            </form>
         </div>
-
-        <div class="form-group">
-            <label>Author</label>
-            <input type="text" placeholder="Author..." class="form-control" [(ngModel)]="newQuote.author" name="author" #author='ngModel' required>
-            
-        </div>
-
-        <div class="form-group">
-            <label>Submitted by</label>
-            <input type="text" placeholder="Posted by..." class="form-control" [(ngModel)]="newQuote.submitName" name="submitName" #submitName='ngModel' required>
-            
-        </div>
-
-        <div class="form-group">
-            <label>Date</label>
-            <input type="date" class="form-control" [(ngModel)]="newQuote.postDate" name="postDate" #postDate='ngModel' required>
-        </div>
-
-
-        <button class="btn-dark" type="submit">New Quote</button>
-    </form>
+    </div>
 </div>
