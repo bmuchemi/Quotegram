@@ -8,6 +8,7 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { QuoteToggleComponent } from './quote-toggle/quote-toggle.component';
 import { QuoteSubmitComponent } from './quote-submit/quote-submit.component';
 import { TimeCountPipe } from './time-count.pipe';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { TimeCountPipe } from './time-count.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
