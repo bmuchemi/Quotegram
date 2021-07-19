@@ -1,14 +1,14 @@
 
-    <h2 class="nav-brand text-center">Welcome to Quotegram</h2>
+    <h2 class="title text-center">Welcome to Quotegram</h2>
     <hr>
-    <div class>
+    <div class="q">
         <div class="col-sm-6">
             <div *ngFor='let quote of quotes; let i = index' class="card">
-                <div>
+                <div class="dec">
                     <div class="block">
                         <blockquote class="blockquote mb-0 text-center">"{{quote.text}}" <br>
                             <footer class="blockquote-footer">{{quote.author}}
-                                <button (click)='details(i)' class="btn btn-danger float-right">More Details</button>
+                                <button (click)='details(i)' class="btn btn-success float-right">More Details</button>
                             </footer>
                         </blockquote>
                     </div>
