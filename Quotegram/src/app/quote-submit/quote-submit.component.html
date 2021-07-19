@@ -1,9 +1,9 @@
-
-    <div class="row quotes1">
+<div class="container quotes1">
+    <div class="card-group col-md-6">
         <div class="col-sm-6">
             <h3>Submit a new quote</h3>
 
-            <form #addForm='ngForm' (ngSubmit)='submitQuote();'>
+            <form  (ngSubmit)='submitQuote();'>
                 <div class="form-group">
                     <label>Quote</label>
                     <input type="text" placeholder="Input quote..." class="form-control" required [(ngModel)]="newQuote.text" id="text" name="text" #text='ngModel' required>
@@ -32,4 +32,5 @@
             </form>
         </div>
     </div>
-
+</div>
+    
