@@ -5,11 +5,11 @@
         <span>{{numberOfLikes}}</span>
     </button>
     <button class="btn" (click)="downVote()">
-        <img src="https://static.thenounproject.com/png/2907888-200.png" alt="" width="40px" height="40px" style="background:  red;">
+        <img src="https://static.thenounproject.com/png/2907888-200.png" alt="" width="40px" height="40px" style="background:  orange;">
         <span>{{numberOfDislikes}}</span>
     </button>
     <button class="btn" (click)='deleteQuote(true)'>
-         <img src="https://static.thenounproject.com/png/4054285-200.png" width="40px" height="40px" alt="" >
+         <img src="https://static.thenounproject.com/png/4054285-200.png" width="40px" height="40px" style="background: red;" alt="" >
     </button>
 </div>
 <span class="text-muted">  Posted by: {{quote.submitName}} on {{quote.postDate|date}}</span><br>
