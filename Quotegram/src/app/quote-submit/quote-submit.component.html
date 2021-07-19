@@ -4,13 +4,13 @@
     <form #addForm='ngForm' (ngSubmit)='submitQuote();'>
         <div class="form-group">
             <label>Quote</label>
-            <input type="text" placeholder="Your quote here..." class="form-control" required [(ngModel)]="newQuote.text" id="text" name="text" #text='ngModel' required>
+            <input type="text" placeholder="Input quote..." class="form-control" required [(ngModel)]="newQuote.text" id="text" name="text" #text='ngModel' required>
             
         </div>
 
         <div class="form-group">
             <label>Author</label>
-            <input type="text" placeholder="Quote by..." class="form-control" [(ngModel)]="newQuote.author" name="author" #author='ngModel' required>
+            <input type="text" placeholder="Author..." class="form-control" [(ngModel)]="newQuote.author" name="author" #author='ngModel' required>
             
         </div>
 
