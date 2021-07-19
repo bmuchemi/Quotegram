@@ -1,20 +1,15 @@
 <div class="toggle">
+  
     <button class="btn" (click)="upVote()">
-        <svg class="bi bi-arrow-up-circle-fill" width="25px" height="25px"  fill="green" >
-           
-          </svg> 
+        <img src="https://static.thenounproject.com/png/2907889-200.png" alt="" width="40px" height="40px" style="background: green;">
         <span>{{numberOfLikes}}</span>
     </button>
     <button class="btn" (click)="downVote()">
-        <svg class="bi bi-arrow-down-circle-fill" width="2em" height="2em"  fill="red" >
-            <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 5a.5.5 0 0 0-1 0v4.793L5.354 7.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 9.793V5z"/>
-          </svg> 
+        <img src="https://static.thenounproject.com/png/2907888-200.png" alt="" width="40px" height="40px" style="background:  red;">
         <span>{{numberOfDislikes}}</span>
     </button>
     <button class="btn" (click)='deleteQuote(true)'>
-        <svg class="bi bi-trash-fill" width="2em" height="2em" viewBox="0 0 16 16" fill="red" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
-          </svg>
+       
     </button>
 </div>
 <span class="text-muted">  Posted by: {{quote.submitName}} on {{quote.postDate|date}}</span><br>
