@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { QuoteToggleComponent } from './quote-toggle.component';
 
-describe('QouteDetailsComponent', () => {
+describe('QuoteToggleComponent', () => {
   let component: QuoteToggleComponent;
   let fixture: ComponentFixture<QuoteToggleComponent>;
 

@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { QuoteSubmitComponent } from './quote-submit.component';
 
-describe('UploadFormComponent', () => {
+describe('QuoteSubmitComponent', () => {
   let component: QuoteSubmitComponent;
   let fixture: ComponentFixture<QuoteSubmitComponent>;
 

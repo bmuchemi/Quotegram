@@ -1,4 +1,3 @@
-import { InvokeMethodExpr } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Quotes } from './quotes';
 
@@ -9,12 +8,12 @@ import { Quotes } from './quotes';
 })
 export class QuotesComponent implements OnInit {
   quotes: Quotes[]=[
-    new Quotes(1, 'One, remember to look up at the stars and not down at your feet. Two, never give up work. Work gives you meaning and purpose and life is empty without it. Three, if you are lucky enough to find love, remember it is there and don not throw it away.', 'Stephen Hawking', 'Linda Maina', new Date(2018,2,2)),
-    new Quotes(2, 'The price good men pay for indifference to public affairs is to be ruled by evil men.', 'Plato', 'Anonymous', new Date(2018,1,2))
+    new Quotes(1, 'I came, I saw, I conquered.', 'Julias Caeser', 'Benjamin ', new Date(2021,7,17)),
+    new Quotes(2, 'Survival isnt who you are, it is who you become.', 'The 100', 'Carol', new Date(2021,6,18))
   ];
 
-  details(){
-    this.quotes[1].showDetail = !this.quotes[1].showDetail;
+  details(i:| number){
+    this.quotes[i].showDetail = !this.quotes[i].showDetail;
   }
 
   addAQuote(quote: Quotes){
