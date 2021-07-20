@@ -1,3 +1,4 @@
+import { AlertService } from './../alert-service/alert.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Quotes } from '../quotes/quotes';
 
@@ -12,11 +13,15 @@ export class QuoteToggleComponent implements OnInit {
   quote!: Quotes;
   @Output() seen = new EventEmitter<boolean>();
 
+  alertService: AlertService;
+
   numberOfLikes : number = 0;
   numberOfDislikes : number = 0;
   
   deleteQuote(isSeen:boolean){
     this.seen.emit(isSeen);
+    this.alertService.alertMe('The quote has been successfully deleted!!')
+   
   }
 
   upVote(){
@@ -25,7 +30,9 @@ export class QuoteToggleComponent implements OnInit {
   downVote(){
     this.numberOfDislikes++;
   }
-  constructor() { }
+  constructor(alertService : AlertService) {
+    this.alertService = alertService;
+   }
 
   ngOnInit() {
   }
