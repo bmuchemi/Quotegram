@@ -18,6 +18,15 @@
             </div>
         </div>
     </div>
+
+    
+  <div class="row">
+    <blockquote class="blockquote text-center">
+      <p class="mb-0">{{quote.quote}}</p>
+      <footer class="blockquote-footer"><cite>{{quote.author}}</cite></footer>
+    </blockquote>
+  </div>
+
     <div class="offset-1 col-md-5">
         <app-quote-submit (addQuote)="addAQuote($event)"></app-quote-submit>
     </div>
